@@ -1,0 +1,33 @@
+{
+  "name": "purescript-prelude",
+  "homepage": "https://github.com/purescript/purescript-prelude",
+  "description": "The PureScript Prelude",
+  "keywords": [
+    "purescript"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-prelude.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "version": "0.1.4",
+  "_release": "0.1.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.4",
+    "commit": "4c97cecbf041f27b83f7ae9d39fc2d9b24a097f4"
+  },
+  "_source": "git://github.com/purescript/purescript-prelude.git",
+  "_target": "^0.1.0",
+  "_originalSource": "purescript-prelude"
+}

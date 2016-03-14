@@ -1,0 +1,34 @@
+{
+  "name": "purescript-maps",
+  "homepage": "https://github.com/purescript/purescript-maps",
+  "authors": [
+    "Phil Freeman <paf31@cantab.net>",
+    "John A. De Goes <john@degoes.net>"
+  ],
+  "description": "Purely functional maps implemented in PureScript",
+  "keywords": [
+    "purescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-maps.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-lists": "^0.7.0",
+    "purescript-st": "^0.1.0",
+    "purescript-functions": "^0.1.0"
+  },
+  "devDependencies": {
+    "purescript-quickcheck": "^0.12.0"
+  }
+}

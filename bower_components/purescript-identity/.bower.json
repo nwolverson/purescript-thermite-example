@@ -1,0 +1,39 @@
+{
+  "name": "purescript-identity",
+  "homepage": "https://github.com/purescript/purescript-identity",
+  "description": "Identity value",
+  "keywords": [
+    "purescript"
+  ],
+  "authors": [
+    "Gary Burgess <gary.burgess@gmail.com>",
+    "Hardy Jones <jones3.hardy@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-identity.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-foldable-traversable": "^0.4.0"
+  },
+  "version": "0.4.1",
+  "_release": "0.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.1",
+    "commit": "ff2d0dfcda9ce2e8628c88a0aa6e5723f940ba77"
+  },
+  "_source": "git://github.com/purescript/purescript-identity.git",
+  "_target": "~0.4.0",
+  "_originalSource": "purescript-identity"
+}

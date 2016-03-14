@@ -1,0 +1,33 @@
+{
+  "name": "purescript-math",
+  "homepage": "https://github.com/purescript/purescript-math",
+  "description": "Math functions",
+  "keywords": [
+    "purescript"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-math.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "version": "0.2.0",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "b09b507cb011014226bbf5bf7307c09f85bd8be7"
+  },
+  "_source": "git://github.com/purescript/purescript-math.git",
+  "_target": "^0.2.0",
+  "_originalSource": "purescript-math"
+}

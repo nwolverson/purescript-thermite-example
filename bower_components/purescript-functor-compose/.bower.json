@@ -1,0 +1,33 @@
+{
+  "name": "purescript-functor-compose",
+  "homepage": "https://github.com/DavidHarrison/purescript-functor-compose",
+  "description": "Compose Functors (and other type classes) in PureScript.",
+  "keywords": [
+    "purescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DavidHarrison/purescript-functor-compose.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "output",
+    "test",
+    "bower.json"
+  ],
+  "dependencies": {
+    "purescript-control": "^0.3.2",
+    "purescript-foldable-traversable": "^0.4.1"
+  },
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "e160fbb7ffc14845d582deeded311f626b5a4872"
+  },
+  "_source": "git://github.com/DavidHarrison/purescript-functor-compose.git",
+  "_target": "~0.0.1",
+  "_originalSource": "purescript-functor-compose"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "purescript-nullable",
+  "version": "0.2.1",
+  "authors": [
+    "Phil Freeman <paf31@cantab.net>"
+  ],
+  "description": "A library for dealing with nulls",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-maybe": "^0.3.0",
+    "purescript-functions": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paf31/purescript-nullable.git"
+  },
+  "homepage": "https://github.com/paf31/purescript-nullable",
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "57966bfacc905122a0e8ebecd031fac5a2303ae2"
+  },
+  "_source": "git://github.com/paf31/purescript-nullable.git",
+  "_target": "~0.2.1",
+  "_originalSource": "purescript-nullable"
+}
