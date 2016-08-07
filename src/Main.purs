@@ -1,22 +1,21 @@
 module Main where
 
 import Prelude
-
-import Data.Nullable (toMaybe)
-import Data.Maybe.Unsafe (fromJust)
-
-import Thermite as T
-
-import React as R
-import React.DOM as R
 import React.DOM.Props as RP
 import ReactDOM as RDOM
-
-import DOM.HTML as DOM
-import DOM.HTML.Types as DOM
-import DOM.HTML.Window as DOM
-import DOM.Node.ParentNode as DOM
-
+import Thermite as T
+import Control.Monad.Eff (Eff)
+import DOM (DOM)
+import DOM.HTML (window) as DOM
+import DOM.HTML.Types (htmlDocumentToParentNode) as DOM
+import DOM.HTML.Window (document) as DOM
+import DOM.Node.ParentNode (querySelector) as DOM
+import Data.Maybe (Maybe, fromJust)
+import Data.Nullable (toMaybe)
+import Partial.Unsafe (unsafePartial)
+import React (ReactComponent)
+import React (createFactory) as R
+import React.DOM (text, button, p') as R
 
 data Action = Increment | Decrement
 
@@ -25,7 +24,7 @@ type State = { counter :: Int }
 initialState :: State
 initialState = { counter: 0 }
 
-render :: T.Render State _ Action
+render :: forall a. T.Render State a Action
 render dispatch _ state _ =
   [ R.p' [ R.text "Value: "
          , R.text $ show state.counter
@@ -37,14 +36,15 @@ render dispatch _ state _ =
          ]
   ]
 
-performAction :: T.PerformAction _ State _ Action
-performAction Increment _ _ update = update $ \state -> state { counter = state.counter + 1 }
-performAction Decrement _ _ update = update $ \state -> state { counter = state.counter - 1 }
+performAction :: forall a b. T.PerformAction a State b Action
+performAction Increment _ _ = void $ T.cotransform $ \state -> state { counter = state.counter + 1 }
+performAction Decrement _ _ = void $ T.cotransform $ \state -> state { counter = state.counter - 1 }
 
-spec :: T.Spec _ State _ Action
+spec :: forall a b. T.Spec a State b Action
 spec = T.simpleSpec performAction render
 
-main = do
+main :: forall eff. Eff (dom :: DOM | eff) (Maybe ReactComponent)
+main = unsafePartial do
   let component = T.createClass spec initialState
   document <- DOM.window >>= DOM.document
   container <- fromJust <<< toMaybe <$> DOM.querySelector "#container" (DOM.htmlDocumentToParentNode document)

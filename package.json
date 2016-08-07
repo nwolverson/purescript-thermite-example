@@ -2,7 +2,7 @@
   "name": "purescript-thermite-example",
   "private": true,
   "scripts": {
-    "build": "pulp build -r ../ && webpack --progress --colors",
+    "build": "pulp build && webpack --progress --colors",
     "install": "bower install"
   },
   "dependencies": {
