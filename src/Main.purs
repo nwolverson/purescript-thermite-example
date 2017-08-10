@@ -1,21 +1,21 @@
 module Main where
 
 import Prelude
-import React.DOM.Props as RP
-import ReactDOM as RDOM
-import Thermite as T
+
 import Control.Monad.Eff (Eff)
 import DOM (DOM)
 import DOM.HTML (window) as DOM
 import DOM.HTML.Types (htmlDocumentToParentNode) as DOM
 import DOM.HTML.Window (document) as DOM
-import DOM.Node.ParentNode (querySelector) as DOM
+import DOM.Node.ParentNode (querySelector, QuerySelector(..)) as DOM
 import Data.Maybe (Maybe, fromJust)
-import Data.Nullable (toMaybe)
 import Partial.Unsafe (unsafePartial)
 import React (ReactComponent)
 import React (createFactory) as R
 import React.DOM (text, button, p') as R
+import React.DOM.Props as RP
+import ReactDOM as RDOM
+import Thermite as T
 
 data Action = Increment | Decrement
 
@@ -47,5 +47,5 @@ main :: forall eff. Eff (dom :: DOM | eff) (Maybe ReactComponent)
 main = unsafePartial do
   let component = T.createClass spec initialState
   document <- DOM.window >>= DOM.document
-  container <- fromJust <<< toMaybe <$> DOM.querySelector "#container" (DOM.htmlDocumentToParentNode document)
+  container <- fromJust <$> DOM.querySelector (DOM.QuerySelector "#container") (DOM.htmlDocumentToParentNode document)
   RDOM.render (R.createFactory component {}) container
